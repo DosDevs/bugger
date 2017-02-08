@@ -1,0 +1,9 @@
+bugger - a bug tracking system
+
+The repository is organized as follows:
+    README          - This file
+    build.sh        - Script to build everything.
+    bugger/         - The command-line client
+    html/           - The web client
+    db/             - The database
+
