@@ -1,13 +1,5 @@
-const config = {
-  apiKey: "AIzaSyBOO1qUgdm3tw95MIreR8_ZHayBa8Jx0LA",
-  authDomain: "bugger-e6218.firebaseapp.com",
-  databaseURL: "https://bugger-e6218.firebaseio.com",
-  storageBucket: "bugger-e6218.appspot.com",
-  messagingSenderId: "899597250589"
-};
-const firebase = require("firebase").initializeApp(config);
 const vorpal = require("vorpal")();
-var db = firebase.database();
+const db = require("./database");
 var current_project = null;
 
 vorpal
