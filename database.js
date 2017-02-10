@@ -52,7 +52,7 @@ function getProjectByShortName(shortname, callback) {
 }
 
 function getAllBugsForProject(project, callback) {
-  db.ref("projects").child(project).child("bugs/open").once("value", snp => {
+  db.ref("bugs").child(project).once("value", snp => {
     var data = snp.val();
     if (!data) {
       callback();
@@ -71,7 +71,8 @@ function getAllBugsForProject(project, callback) {
 
 function addBugToProject(project, info, callback) {
   info.user = auth.session.user.uid;
-  db.ref("projects").child(project).child("bugs/open").push(info, () => {
+  info.status = "open"
+  db.ref("bugs").child(project).push(info, () => {
     callback();
   });
 }
