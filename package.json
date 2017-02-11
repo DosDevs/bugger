@@ -1,6 +1,6 @@
 {
   "name": "dd-bugger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bugger - a bug tracking system",
   "bin": "./bin/dd-bugger",
   "main": "index.js",
